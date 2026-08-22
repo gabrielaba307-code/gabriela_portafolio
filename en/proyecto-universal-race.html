@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Universal Race | Gabriela Barreda</title>
+
+  <meta
+    name="description"
+    content="UX/UI case study for Universal Race, a horse racing betting platform designed for web and mobile."
+  >
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="apple-touch-icon" href="../images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../case-study.css">
+
+  <style>
+
+    .case-language {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding-left: 8px;
+      margin-left: 3px;
+      border-left: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .case-language span {
+      font-size: 12px;
+      color: #b79889;
+    }
+
+    .case-language .active-language {
+      color: var(--orange);
+      font-weight: 800;
+    }
+
+    .case-language a {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .case-language a:hover {
+      color: var(--orange);
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <div class="case-top">
+
+    <nav class="case-nav">
+
+      <a href="index.html#projects">← Projects</a>
+      <a href="#race">Race</a>
+      <a href="#challenge">Challenge</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#responsive">Responsive</a>
+      <a href="#decisions">UX/UI Decisions</a>
+      <a href="#outcome">Outcome</a>
+
+      <span class="case-language">
+
+        <a
+          href="../proyecto-universal-race.html"
+          lang="es"
+        >
+          ES
+        </a>
+
+        <span>/</span>
+
+        <span class="active-language">
+          EN
+        </span>
+
+      </span>
+
+    </nav>
+
+  </div>
+
+
+  <main>
+
+    <section class="case-hero">
+
+      <div class="case-container">
+
+        <div class="case-kicker">
+          Horse Racing Platform · Web + Mobile · UX/UI
+        </div>
+
+        <h1>
+
+          Understand the race
+
+          <span>
+            before placing a bet.
+          </span>
+
+        </h1>
+
+        <p class="case-description">
+          Universal Race brings together races, participants, and markets
+          that need to be interpreted quickly. The UX/UI work focused
+          on making alternatives easier to read and compare while adapting
+          that same logic from desktop to mobile without losing
+          relevant information.
+        </p>
+
+
+        <div class="case-cover">
+
+          <img
+            src="../images/Plataforma Hípica_Universal Race.png"
+            alt="Universal Race"
+          >
+
+        </div>
+
+
+        <div class="case-meta">
+
+          <div class="meta-item">
+            <strong>Role</strong>
+            <span>UX/UI Designer</span>
+          </div>
+
+          <div class="meta-item">
+            <strong>Product</strong>
+            <span>Horse Racing Platform</span>
+          </div>
+
+          <div class="meta-item">
+            <strong>Versions</strong>
+            <span>Web · Mobile</span>
+          </div>
+
+          <div class="meta-item">
+            <strong>Focus</strong>
+            <span>Responsive UX/UI</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="case-section"
+      id="race"
+    >
+
+      <div class="case-container">
+
+        <span class="section-label">
+          01 · The Race
+        </span>
+
+        <h2>
+          Every event brings several variables together.
+        </h2>
+
+        <p class="case-lead">
+          Before making a selection, users need to identify the race,
+          review participants, and find the betting options
+          they are interested in.
+        </p>
+
+        <p>
+          When all these elements compete visually, comparing alternatives
+          requires more effort and important information becomes easier
+          to overlook.
+        </p>
+
+        <p>
+          The design needed to support a transition from an overall view
+          to a specific decision without forcing users to memorize
+          data across screens.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="case-section"
+      id="challenge"
+    >
+
+      <div class="case-container">
+
+        <span class="section-label">
+          02 · The Challenge
+        </span>
+
+        <h2>
+          Compare without relying on memory.
+        </h2>
+
+        <p class="case-lead">
+          The challenge was not simply displaying information,
+          but making comparison easier before the user selected
+          an option.
+        </p>
+
+
+        <div class="challenge-grid">
+
+          <article class="challenge-card">
+
+            <span class="challenge-number">
+              01
+            </span>
+
+            <h3>
+              Consecutive races
+            </h3>
+
+            <p>
+              Make the active race easy to distinguish when several
+              upcoming events are close together.
+            </p>
+
+          </article>
+
+
+          <article class="challenge-card">
+
+            <span class="challenge-number">
+              02
+            </span>
+
+            <h3>
+              Compare participants
+            </h3>
+
+            <p>
+              Present data through stable patterns that make comparison
+              between horses easier.
+            </p>
+
+          </article>
+
+
+          <article class="challenge-card">
+
+            <span class="challenge-number">
+              03
+            </span>
+
+            <h3>
+              Find markets
+            </h3>
+
+            <p>
+              Provide access to different betting options without giving
+              every alternative the same visual weight.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="case-section"
+      id="architecture"
+    >
+
+      <div class="case-container">
+
+        <span class="section-label">
+          03 · Architecture
+        </span>
+
+        <h2>
+          From race to market.
+        </h2>
+
+        <p class="case-lead">
+          Navigation follows the order in which a horse racing bet
+          is analyzed: first the event, then its participants,
+          and finally the available betting options.
+        </p>
+
+
+        <div class="modules-grid">
+
+          <article class="module-card">
+
+            <span class="module-tag">
+              LEVEL 01
+            </span>
+
+            <h3>
+              Race
+            </h3>
+
+            <p>
+              Establishes the event being reviewed
+              and acts as the starting point.
+            </p>
+
+          </article>
+
+
+          <article class="module-card">
+
+            <span class="module-tag">
+              LEVEL 02
+            </span>
+
+            <h3>
+              Participants
+            </h3>
+
+            <p>
+              Allows users to review and compare the horses
+              associated with the selected race.
+            </p>
+
+          </article>
+
+
+          <article class="module-card">
+
+            <span class="module-tag">
+              LEVEL 03
+            </span>
+
+            <h3>
+              Markets
+            </h3>
+
+            <p>
+              Presents the available betting alternatives once
+              the event has been selected.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <div class="case-image">
+
+          <img
+            src="../images/universal-race-arquitectura.png"
+            alt="Universal Race architecture"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="case-section"
+      id="responsive"
+    >
+
+      <div class="case-container">
+
+        <span class="section-label">
+          04 · Responsive
+        </span>
+
+        <h2>
+          Priorities change with the screen.
+        </h2>
+
+        <p class="case-lead">
+          Desktop allows users to compare more elements simultaneously.
+          Mobile needs to reveal the same information more progressively.
+        </p>
+
+        <p>
+          The adaptation was not about simply shrinking components,
+          but deciding what should appear first and what can be
+          discovered later.
+        </p>
+
+
+        <div class="modules-grid">
+
+          <article class="module-card">
+
+            <span class="module-tag">
+              DESKTOP
+            </span>
+
+            <h3>
+              Side-by-side comparison
+            </h3>
+
+            <p>
+              Horizontal space allows more participants and data
+              to remain visible at the same time.
+            </p>
+
+          </article>
+
+
+          <article class="module-card">
+
+            <span class="module-tag">
+              MOBILE
+            </span>
+
+            <h3>
+              Progressive reading
+            </h3>
+
+            <p>
+              Content follows a vertical sequence and prioritizes
+              what users need for the next decision.
+            </p>
+
+          </article>
+
+
+          <article class="module-card">
+
+            <span class="module-tag">
+              ADAPTATION
+            </span>
+
+            <h3>
+              Shared references
+            </h3>
+
+            <p>
+              Race, participants, and markets keep a recognizable
+              relationship across devices.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <div class="case-image">
+
+          <img
+            src="../images/universal-race-responsive.png"
+            alt="Universal Race on desktop and mobile"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="case-section"
+      id="decisions"
+    >
+
+      <div class="case-container">
+
+        <span class="section-label">
+          05 · UX/UI Decisions
+        </span>
+
+        <h2>
+          Design for comparison.
+        </h2>
+
+        <p class="case-lead">
+          The decisions focused on reducing the effort needed
+          to identify races, compare participants, and reach
+          the desired betting market.
+        </p>
+
+
+        <div class="decisions-list">
+
+          <article class="decision-item">
+
+            <span class="decision-number">
+              01
+            </span>
+
+            <h3>
+              Recognizable active race
+            </h3>
+
+            <p>
+              The selected event is visually differentiated
+              from the other available races.
+            </p>
+
+          </article>
+
+
+          <article class="decision-item">
+
+            <span class="decision-number">
+              02
+            </span>
+
+            <h3>
+              Participant patterns
+            </h3>
+
+            <p>
+              Repeated positions and styles make comparison
+              between alternatives easier.
+            </p>
+
+          </article>
+
+
+          <article class="decision-item">
+
+            <span class="decision-number">
+              03
+            </span>
+
+            <h3>
+              Grouped reading
+            </h3>
+
+            <p>
+              Related data is grouped to avoid presenting
+              a continuous sequence of undifferentiated values.
+            </p>
+
+          </article>
+
+
+          <article class="decision-item">
+
+            <span class="decision-number">
+              04
+            </span>
+
+            <h3>
+              Progressive markets
+            </h3>
+
+            <p>
+              Primary alternatives are prioritized while additional
+              options remain available when users need to go deeper.
+            </p>
+
+          </article>
+
+
+          <article class="decision-item">
+
+            <span class="decision-number">
+              05
+            </span>
+
+            <h3>
+              Mobile prioritization
+            </h3>
+
+            <p>
+              Content is reorganized according to importance rather than
+              simply preserving its desktop position.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="case-section"
+      id="outcome"
+    >
+
+      <div class="case-container">
+
+        <span class="section-label">
+          06 · Outcome
+        </span>
+
+        <div class="result-box">
+
+          <h2>
+            Greater clarity for comparison and decision-making.
+          </h2>
+
+          <p>
+            The solution creates a recognizable sequence between
+            race, participants, and markets and maintains that logic
+            across web and mobile.
+          </p>
+
+          <p>
+            The goal was not to show less information,
+            but to make it easier to interpret at the moment
+            users need it.
+          </p>
+
+        </div>
+
+
+        <div class="results-grid">
+
+          <article class="result-card">
+            <strong>01</strong>
+            <span>Clear sequence from race to participant to market.</span>
+          </article>
+
+          <article class="result-card">
+            <strong>02</strong>
+            <span>Patterns designed to support faster comparison.</span>
+          </article>
+
+          <article class="result-card">
+            <strong>03</strong>
+            <span>Responsive adaptation across desktop and mobile.</span>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="explore-section">
+
+      <div class="case-container">
+
+        <h2>
+          More Projects
+        </h2>
+
+        <div class="explore-grid">
+
+          <a
+            class="explore-card"
+            href="retail-case-study.html"
+          >
+
+            <img
+              src="../images/Back Office_Apuestas Retail.png"
+              alt="Retail Betting Back Office"
+            >
+
+            <div class="explore-info">
+              <span>Back Office · Retail</span>
+              <strong>Retail Betting Back Office →</strong>
+            </div>
+
+          </a>
+
+
+          <a
+            class="explore-card"
+            href="doradobet-case-study.html"
+          >
+
+            <img
+              src="../images/Plataforma Hipica_DoradoBet.png"
+              alt="DoradoBet"
+            >
+
+            <div class="explore-info">
+              <span>Terminal · Horse Racing</span>
+              <strong>DoradoBet →</strong>
+            </div>
+
+          </a>
+
+
+          <a
+            class="explore-card"
+            href="aciertala-case-study.html"
+          >
+
+            <img
+              src="../images/Plataforma Sportsbook_Aciértala.png"
+              alt="Aciértala"
+            >
+
+            <div class="explore-info">
+              <span>Sportsbook · Web</span>
+              <strong>Aciértala →</strong>
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="case-footer">
+
+    <div class="case-container">
+      © 2026 Gabriela Barreda Rios · UX/UI Designer
+    </div>
+
+  </footer>
+
+</body>
+</html>

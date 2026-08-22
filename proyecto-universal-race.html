@@ -12,7 +12,6 @@
     content="Case study UX/UI de Universal Race, plataforma de apuestas hípicas diseñada para web y mobile."
   >
 
-  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/favicon.png">
 
@@ -25,6 +24,40 @@
   >
 
   <link rel="stylesheet" href="case-study.css">
+
+  <style>
+
+    .case-language {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding-left: 8px;
+      margin-left: 3px;
+      border-left: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .case-language span {
+      font-size: 12px;
+      color: #b79889;
+    }
+
+    .case-language .active-language {
+      color: var(--orange);
+      font-weight: 800;
+    }
+
+    .case-language a {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .case-language a:hover {
+      color: var(--orange);
+    }
+
+  </style>
+
 </head>
 
 
@@ -41,6 +74,23 @@
       <a href="#responsive">Responsive</a>
       <a href="#decisiones">Decisiones UX/UI</a>
       <a href="#resultado">Resultado</a>
+
+      <span class="case-language">
+
+        <span class="active-language">
+          ES
+        </span>
+
+        <span>/</span>
+
+        <a
+          href="en/universal-race-case-study.html"
+          lang="en"
+        >
+          EN
+        </a>
+
+      </span>
 
     </nav>
 
@@ -638,9 +688,11 @@
 
 
   <footer class="case-footer">
+
     <div class="case-container">
       © 2026 Gabriela Barreda Rios · UX/UI Designer
     </div>
+
   </footer>
 
 </body>
