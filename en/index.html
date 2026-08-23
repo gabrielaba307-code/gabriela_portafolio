@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gabriela Barreda | UX/UI Designer</title>
+
+  <meta
+    name="description"
+    content="UX/UI design portfolio by Gabriela Barreda, focused on digital products, operational tools, betting platforms, and complex interfaces."
+  >
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="apple-touch-icon" href="../images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --cream: #fffaf5;
+      --cream-2: #fff2e7;
+      --white: #ffffff;
+      --orange: #f46f3d;
+      --orange-2: #ff963f;
+      --brown: #4b281b;
+      --brown-2: #754e3e;
+      --muted: #886b5f;
+      --border: #f2d9cc;
+      --shadow: 0 24px 60px rgba(112, 55, 30, 0.12);
+      --radius: 30px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--brown);
+
+      background:
+        radial-gradient(
+          circle at 15% 8%,
+          rgba(255, 176, 125, 0.2),
+          transparent 25rem
+        ),
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(255, 206, 105, 0.18),
+          transparent 28rem
+        ),
+        var(--cream);
+
+      font-family: "Poppins", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.3;
+      pointer-events: none;
+
+      background-image:
+        radial-gradient(
+          #f6a27f 1px,
+          transparent 1px
+        );
+
+      background-size: 28px 28px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 105px 0;
+      scroll-margin-top: 110px;
+    }
+
+    .section-soft {
+      background: rgba(255, 242, 231, 0.72);
+      border-block: 1px solid rgba(242, 217, 204, 0.75);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 14px;
+      color: #d94d20;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      background: var(--orange);
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px rgba(244, 111, 61, 0.15);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-top: 0;
+      font-family: "Poppins", sans-serif;
+      line-height: 1.08;
+    }
+
+    h2 {
+      margin-bottom: 16px;
+      font-size: clamp(36px, 5vw, 61px);
+      letter-spacing: -0.045em;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 50px;
+    }
+
+    .section-heading.center {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .gradient-text {
+      color: transparent;
+      background: linear-gradient(
+        90deg,
+        #e95529,
+        #f68c32,
+        #e95529
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* NAVBAR */
+
+    .nav {
+      position: sticky;
+      top: 16px;
+      z-index: 100;
+
+      width: min(1040px, calc(100% - 28px));
+      margin: 16px auto 0;
+      padding: 9px 12px 9px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+
+      background: rgba(255, 250, 245, 0.88);
+      border: 1px solid rgba(242, 217, 204, 0.9);
+      border-radius: 999px;
+
+      box-shadow: 0 12px 32px rgba(95, 50, 30, 0.09);
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .brand-photo {
+      width: 32px;
+      height: 32px;
+      flex: 0 0 32px;
+      overflow: hidden;
+      background: var(--cream-2);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+    }
+
+    .brand-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 500;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--orange);
+      background: var(--cream-2);
+    }
+
+    .nav-contact {
+      padding: 9px 17px !important;
+      color: white !important;
+      background: var(--brown) !important;
+      font-weight: 600 !important;
+    }
+
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      padding-left: 8px;
+      border-left: 1px solid var(--border);
+      white-space: nowrap;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .language-switcher span {
+      color: #b79889;
+    }
+
+    .language-switcher .active-language {
+      color: var(--orange);
+      font-weight: 800;
+    }
+
+    .language-switcher a {
+      padding: 6px 7px;
+      border-radius: 999px;
+      color: var(--muted);
+    }
+
+    .language-switcher a:hover {
+      color: var(--orange);
+      background: var(--cream-2);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 660px;
+      padding: 75px 20px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+
+    .hero-content {
+      width: 100%;
+      max-width: 1050px;
+      transform: translateY(-43px);
+    }
+
+    .hero h1 {
+      width: 100%;
+      max-width: 1100px;
+      margin: 22px auto 14px;
+      font-size: clamp(52px, 6.2vw, 90px);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.055em;
+    }
+
+    .hero-title-line {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .hero-title-line.gradient-text {
+      padding: 0.04em 0 0.16em;
+      line-height: 1.14;
+    }
+
+    .hero-description {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--brown-2);
+      font-size: clamp(16px, 1.55vw, 19px);
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 48px;
+      padding: 0 22px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(
+        135deg,
+        var(--orange),
+        var(--orange-2)
+      );
+      box-shadow: 0 10px 23px rgba(244, 111, 61, 0.22);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.78);
+      border-color: var(--border);
+    }
+
+    .hero-tags {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 19px;
+      color: var(--brown-2);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero-tags span::before {
+      content: "✦";
+      margin-right: 7px;
+      color: var(--orange);
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .project-card {
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 18px 40px rgba(91, 48, 29, 0.07);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-visual {
+      height: 330px;
+      overflow: hidden;
+      background: #f5eee9;
+    }
+
+    .project-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover .project-cover {
+      transform: scale(1.035);
+    }
+
+    .project-info {
+      padding: 27px;
+    }
+
+    .project-meta {
+      margin-bottom: 10px;
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-info h3 {
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+
+    .project-info p {
+      min-height: 76px;
+      margin: 0 0 22px;
+      color: var(--muted);
+    }
+
+    .case-study-link {
+      font-weight: 700;
+    }
+
+    .project-card:hover .case-study-link {
+      color: var(--orange);
+    }
+
+    /* PROCESS */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .process-card {
+      min-height: 250px;
+      padding: 26px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--border);
+      border-radius: 25px;
+    }
+
+    .process-number {
+      display: grid;
+      width: 43px;
+      height: 43px;
+      margin-bottom: 32px;
+      place-items: center;
+      color: white;
+      background: var(--orange);
+      border-radius: 50%;
+      font-weight: 800;
+    }
+
+    .process-card h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .process-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* TOOLS */
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .tool {
+      padding: 15px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+    }
+
+    .tool-logo-box {
+      width: 56px;
+      height: 56px;
+      flex: 0 0 56px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+    }
+
+    .tool-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tool strong {
+      display: block;
+    }
+
+    .tool small {
+      color: var(--muted);
+    }
+
+    /* EXPERIENCE */
+
+    .experience-list {
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .experience-item {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 20px;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .experience-item:last-child {
+      border-bottom: 0;
+    }
+
+    .experience-logo {
+      width: 52px;
+      height: 52px;
+      object-fit: cover;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+    }
+
+    .experience-item h3 {
+      margin-bottom: 5px;
+      font-size: 22px;
+    }
+
+    .experience-meta {
+      color: var(--orange);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .experience-item p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .linkedin-cta {
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .profile-card {
+      min-height: 430px;
+      padding: 45px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: linear-gradient(145deg, #ffb08a, #ffc765);
+      border-radius: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .profile-photo-wrapper {
+      width: 205px;
+      height: 205px;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 50%;
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .profile-card h3 {
+      margin: 28px 0 4px;
+      font-size: 25px;
+    }
+
+    .profile-card p {
+      margin: 0;
+      color: var(--brown-2);
+      font-weight: 600;
+    }
+
+    .about-copy > p {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .strengths {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .strength {
+      padding: 18px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    .strength strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .strength span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* FAQ */
+
+    .faq-list {
+      max-width: 900px;
+      margin-inline: auto;
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      padding: 22px 25px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid var(--border);
+      border-radius: 19px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    details p {
+      color: var(--muted);
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 35px 0 65px;
+    }
+
+    .footer {
+      padding-top: 55px;
+      display: grid;
+      grid-template-columns: 1.45fr 0.65fr 0.8fr;
+      gap: 70px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-profile {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .footer-avatar {
+      width: 45px;
+      height: 45px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .footer h3 {
+      margin: 0;
+    }
+
+    .footer-description,
+    .footer-links {
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 8px;
+    }
+
+    .footer-links a:hover {
+      color: var(--orange);
+    }
+
+    .footer-title {
+      margin-bottom: 14px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 900px) {
+
+      .nav {
+        border-radius: 26px;
+      }
+
+      .nav-links a:not(.nav-contact) {
+        display: none;
+      }
+
+      .projects-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid,
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 620px) {
+
+      .container {
+        width: min(calc(100% - 26px), 1160px);
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .nav {
+        top: 8px;
+        width: calc(100% - 18px);
+        margin-top: 8px;
+        padding: 7px 8px;
+        gap: 6px;
+        border-radius: 22px;
+      }
+
+      .brand {
+        min-width: 0;
+        gap: 7px;
+        flex: 1 1 auto;
+      }
+
+      .brand-photo {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+      }
+
+      .brand span:last-child {
+        max-width: 75px;
+        overflow: hidden;
+        font-size: 0;
+        white-space: nowrap;
+      }
+
+      .brand span:last-child::after {
+        content: "Gabriela";
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .nav-right {
+        flex: 0 0 auto;
+        gap: 5px;
+      }
+
+      .nav-links {
+        gap: 0;
+      }
+
+      .nav-links a:not(.nav-contact) {
+        display: none;
+      }
+
+      .nav-contact {
+        min-height: 34px;
+        padding: 0 13px !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px !important;
+        line-height: 1;
+        border-radius: 999px;
+      }
+
+      .language-switcher {
+        order: -1;
+        gap: 1px;
+        padding-left: 0;
+        padding-right: 2px;
+        border-left: 0;
+        font-size: 11px;
+      }
+
+      .language-switcher a {
+        padding: 4px 3px;
+      }
+
+      .language-switcher span {
+        padding: 4px 2px;
+      }
+
+      .language-switcher .active-language {
+        font-weight: 800;
+      }
+
+      .hero {
+        min-height: 620px;
+        padding: 65px 15px 60px;
+      }
+
+      .hero-content {
+        transform: translateY(-38px);
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 12vw, 64px);
+        line-height: 1.12;
+      }
+
+      .hero-title-line {
+        white-space: normal;
+      }
+
+      .hero-title-line.gradient-text {
+        padding-bottom: 0.16em;
+        line-height: 1.14;
+      }
+
+      .hero-description {
+        max-width: 500px;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .projects-grid,
+      .process-grid,
+      .tools-grid,
+      .strengths,
+      .footer {
+        grid-template-columns: 1fr;
+      }
+
+      .project-visual {
+        height: 260px;
+      }
+
+      .experience-item {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-card {
+        min-height: 370px;
+        padding: 30px;
+      }
+
+      .profile-photo-wrapper {
+        width: 170px;
+        height: 170px;
+      }
+
+      .footer {
+        gap: 35px;
+      }
+
+    }
+
+    @media (max-width: 370px) {
+
+      .nav {
+        width: calc(100% - 12px);
+        padding: 6px 7px;
+        gap: 3px;
+      }
+
+      .brand {
+        gap: 5px;
+      }
+
+      .brand-photo {
+        width: 26px;
+        height: 26px;
+        flex: 0 0 26px;
+      }
+
+      .brand span:last-child::after {
+        font-size: 11px;
+      }
+
+      .nav-right {
+        gap: 2px;
+      }
+
+      .language-switcher {
+        font-size: 10px;
+      }
+
+      .nav-contact {
+        min-height: 32px;
+        padding: 0 10px !important;
+        font-size: 11px !important;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <nav class="nav" aria-label="Main navigation">
+
+    <a class="brand" href="#home">
+
+      <span class="brand-photo">
+        <img
+          src="../images/foto-navbar.png"
+          alt="Gabriela Barreda"
+        >
+      </span>
+
+      <span>Gabriela Barreda</span>
+
+    </a>
+
+
+    <div class="nav-right">
+
+      <div class="nav-links">
+
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#tools">Tools</a>
+        <a href="#about">About</a>
+
+        <a class="nav-contact" href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+
+      <div class="language-switcher" aria-label="Select language">
+
+        <a
+          href="../index.html"
+          lang="es"
+          aria-label="Ver portafolio en español"
+        >
+          ES
+        </a>
+
+        <span>/</span>
+
+        <span class="active-language">
+          EN
+        </span>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <main>
+
+    <header class="hero" id="home">
+
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          UX/UI Designer · Lima, Peru
+        </span>
+
+
+        <h1>
+
+          <span class="hero-title-line">
+            I design clear
+          </span>
+
+          <span class="hero-title-line gradient-text">
+            digital experiences.
+          </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+          Hi, I'm Gabriela, a UX/UI Designer focused on creating
+          intuitive, visually engaging, and user-centered digital products.
+        </p>
+
+
+        <div class="hero-actions">
+
+          <a class="btn btn-primary" href="#projects">
+            View projects →
+          </a>
+
+          <a
+            class="btn btn-secondary"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=gabrielaba307@gmail.com&su=UX%2FUI%20Job%20Opportunity%20%E2%80%94%20Gabriela%20Barreda"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contact me
+          </a>
+
+        </div>
+
+
+        <div class="hero-tags">
+          <span>UX/UI Design</span>
+          <span>Prototyping</span>
+          <span>Figma</span>
+          <span>Responsive Design</span>
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <section class="section section-soft" id="projects">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Selected Projects
+          </span>
+
+          <h2>
+            Digital products designed for
+            <span class="gradient-text">
+              real-world operations.
+            </span>
+          </h2>
+
+          <p>
+            Betting platforms, operational tools, and interfaces
+            designed to simplify workflows and improve the user experience.
+          </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+          <article
+            class="project-card"
+            tabindex="0"
+            role="link"
+            onclick="openProject(event, 'proyecto-retail.html')"
+            onkeydown="openProjectKeyboard(event, 'proyecto-retail.html')"
+          >
+
+            <div class="project-visual">
+              <img
+                class="project-cover"
+                src="../images/Back Office_Apuestas Retail.png"
+                alt="Retail Betting Back Office"
+              >
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-meta">
+                Back Office · Retail
+              </div>
+
+              <h3>
+                Retail Betting Back Office
+              </h3>
+
+              <p>
+                An operational tool designed to review and manage
+                retail betting information in a clear, fast,
+                and organized way.
+              </p>
+
+              <span class="case-study-link">
+                View case study →
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="project-card"
+            tabindex="0"
+            role="link"
+            onclick="openProject(event, 'proyecto-universal-race.html')"
+            onkeydown="openProjectKeyboard(event, 'proyecto-universal-race.html')"
+          >
+
+            <div class="project-visual">
+              <img
+                class="project-cover"
+                src="../images/Plataforma Hípica_Universal Race.png"
+                alt="Universal Race"
+              >
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-meta">
+                Horse Racing · Platform
+              </div>
+
+              <h3>
+                Universal Race
+              </h3>
+
+              <p>
+                A horse racing betting platform designed to make
+                races, participants, markets, and betting options
+                easier to explore.
+              </p>
+
+              <span class="case-study-link">
+                View case study →
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="project-card"
+            tabindex="0"
+            role="link"
+            onclick="openProject(event, 'proyecto-doradobet.html')"
+            onkeydown="openProjectKeyboard(event, 'proyecto-doradobet.html')"
+          >
+
+            <div class="project-visual">
+              <img
+                class="project-cover"
+                src="../images/Plataforma Hipica_DoradoBet.png"
+                alt="DoradoBet"
+              >
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-meta">
+                Terminal · Horse Racing
+              </div>
+
+              <h3>
+                DoradoBet
+              </h3>
+
+              <p>
+                A betting terminal interface focused on faster operations,
+                clearer reading, and reducing errors during use.
+              </p>
+
+              <span class="case-study-link">
+                View case study →
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="project-card"
+            tabindex="0"
+            role="link"
+            onclick="openProject(event, 'proyecto-aciertala.html')"
+            onkeydown="openProjectKeyboard(event, 'proyecto-aciertala.html')"
+          >
+
+            <div class="project-visual">
+              <img
+                class="project-cover"
+                src="../images/Plataforma Sportsbook_Aciértala.png"
+                alt="Aciértala Sportsbook"
+              >
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-meta">
+                Sportsbook · Web Platform
+              </div>
+
+              <h3>
+                Aciértala Sportsbook
+              </h3>
+
+              <p>
+                A sports betting experience designed to organize
+                events, markets, selections, and bet slip building.
+              </p>
+
+              <span class="case-study-link">
+                View case study →
+              </span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-heading center">
+
+          <span class="eyebrow">
+            My Process
+          </span>
+
+          <h2>
+            From a problem to a
+            <span class="gradient-text">
+              functional experience.
+            </span>
+          </h2>
+
+          <p>
+            Each project starts by understanding users and business needs
+            and turning them into clear and intuitive solutions.
+          </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+          <article class="process-card">
+            <span class="process-number">1</span>
+            <h3>Discover</h3>
+            <p>
+              I analyze the problem, business goals,
+              user needs, and product requirements.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <span class="process-number">2</span>
+            <h3>Define</h3>
+            <p>
+              I organize findings, prioritize needs,
+              and define architecture, flows, and functionality.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <span class="process-number">3</span>
+            <h3>Design</h3>
+            <p>
+              I create wireframes, interfaces,
+              and interactive prototypes with a focus
+              on usability and visual consistency.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <span class="process-number">4</span>
+            <h3>Validate & Iterate</h3>
+            <p>
+              I review the solution, identify opportunities
+              for improvement, and refine the product before handoff.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section section-soft" id="tools">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Tools
+          </span>
+
+          <h2>
+            Tools that support
+            <span class="gradient-text">
+              my workflow.
+            </span>
+          </h2>
+
+        </div>
+
+
+        <div class="tools-grid">
+
+          <article class="tool">
+            <div class="tool-logo-box">
+              <img class="tool-logo" src="../images/logo-figma.png" alt="Figma">
+            </div>
+            <div>
+              <strong>Figma</strong>
+              <small>UI design and prototyping</small>
+            </div>
+          </article>
+
+          <article class="tool">
+            <div class="tool-logo-box">
+              <img class="tool-logo" src="../images/logo-github.png" alt="GitHub">
+            </div>
+            <div>
+              <strong>GitHub</strong>
+              <small>Collaboration and version control</small>
+            </div>
+          </article>
+
+          <article class="tool">
+            <div class="tool-logo-box">
+              <img class="tool-logo" src="../images/logo-chatgpt.png" alt="ChatGPT">
+            </div>
+            <div>
+              <strong>ChatGPT</strong>
+              <small>Ideation and productivity</small>
+            </div>
+          </article>
+
+          <article class="tool">
+            <div class="tool-logo-box">
+              <img class="tool-logo" src="../images/logo-photoshop.png" alt="Adobe Photoshop">
+            </div>
+            <div>
+              <strong>Adobe Photoshop</strong>
+              <small>Image editing</small>
+            </div>
+          </article>
+
+          <article class="tool">
+            <div class="tool-logo-box">
+              <img class="tool-logo" src="../images/logo-illustrator.png" alt="Adobe Illustrator">
+            </div>
+            <div>
+              <strong>Adobe Illustrator</strong>
+              <small>Graphic and vector design</small>
+            </div>
+          </article>
+
+          <article class="tool">
+            <div class="tool-logo-box">
+              <img class="tool-logo" src="../images/logo-miro.png" alt="Miro">
+            </div>
+            <div>
+              <strong>Miro</strong>
+              <small>Flows, ideation, and workshops</small>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section" id="experience">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Experience
+          </span>
+
+          <h2>
+            Experience building
+            <span class="gradient-text">
+              digital products.
+            </span>
+          </h2>
+
+          <p>
+            My background combines UX/UI and graphic design across
+            digital platforms, betting products, entertainment,
+            and visual identity.
+          </p>
+
+        </div>
+
+
+        <div class="experience-list">
+
+          <article class="experience-item">
+
+            <img
+              class="experience-logo"
+              src="../images/logo-perumatic.png"
+              alt="Perumatic Entertainment"
+            >
+
+            <div>
+              <h3>UX/UI Designer</h3>
+              <span class="experience-meta">
+                Perumatic Entertainment · Apr 2025 — Jun 2025
+              </span>
+              <p>
+                Designed interfaces and user flows for digital platforms,
+                from interaction structure to high-fidelity screens
+                and functional prototypes.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="experience-item">
+
+            <img
+              class="experience-logo"
+              src="../images/logo-universal-soft.png"
+              alt="Universal Soft"
+            >
+
+            <div>
+              <h3>UX/UI Designer</h3>
+              <span class="experience-meta">
+                Universal Soft · Apr 2025 — Jun 2025
+              </span>
+              <p>
+                Designed UX/UI solutions for betting and entertainment
+                platforms with a focus on navigation, accessibility,
+                and readability.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="experience-item">
+
+            <img
+              class="experience-logo"
+              src="../images/logo-planyt.png"
+              alt="Planyt"
+            >
+
+            <div>
+              <h3>Graphic Designer</h3>
+              <span class="experience-meta">
+                Planyt · Jan 2025 — Apr 2025
+              </span>
+              <p>
+                Developed visual assets and graphic proposals
+                for brand communication, branding, composition,
+                image editing, and digital materials.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="experience-item">
+
+            <img
+              class="experience-logo"
+              src="../images/logo-conceptos.png"
+              alt="Conceptos"
+            >
+
+            <div>
+              <h3>Graphic Designer</h3>
+              <span class="experience-meta">
+                Conceptos · Jan 2019 — Jan 2022
+              </span>
+              <p>
+                Developed visual identities, graphic assets,
+                and communication materials for different brands.
+              </p>
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="linkedin-cta">
+
+          <a
+            class="btn btn-secondary"
+            href="https://www.linkedin.com/in/gabriela-barreda-22a834263"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View full experience on LinkedIn ↗
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section section-soft" id="about">
+
+      <div class="container about-grid">
+
+        <div class="profile-card">
+
+          <div>
+
+            <div class="profile-photo-wrapper">
+              <img
+                class="profile-photo"
+                src="../images/foto-gabriela.png"
+                alt="Gabriela Barreda Rios"
+              >
+            </div>
+
+            <h3>
+              Gabriela Barreda Rios
+            </h3>
+
+            <p>
+              UX/UI Designer · Lima, Peru
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="about-copy">
+
+          <span class="eyebrow">
+            About Me
+          </span>
+
+          <h2>
+            Creativity with
+            <span class="gradient-text">
+              purpose and clarity.
+            </span>
+          </h2>
+
+          <p>
+            I have a background in graphic design and experience
+            developing UX/UI solutions. This combination allows me
+            to work across product structure, usability,
+            visual identity, and consistency.
+          </p>
+
+          <p>
+            I enjoy turning complex processes and information
+            into experiences that are simple and functional.
+          </p>
+
+
+          <div class="strengths">
+
+            <div class="strength">
+              <strong>Visual Thinking</strong>
+              <span>I communicate complex information clearly.</span>
+            </div>
+
+            <div class="strength">
+              <strong>Attention to Detail</strong>
+              <span>I care about hierarchy, consistency, and quality.</span>
+            </div>
+
+            <div class="strength">
+              <strong>Continuous Learning</strong>
+              <span>I explore new tools and ways to solve problems.</span>
+            </div>
+
+            <div class="strength">
+              <strong>Collaboration</strong>
+              <span>I balance user, product, and development needs.</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-heading center">
+
+          <span class="eyebrow">
+            Why Work With Me?
+          </span>
+
+          <h2>
+            Design focused on
+            <span class="gradient-text">
+              meaningful outcomes.
+            </span>
+          </h2>
+
+        </div>
+
+
+        <div class="faq-list">
+
+          <details open>
+            <summary>What can I bring to a team?</summary>
+            <p>
+              A combination of UX/UI thinking, visual design,
+              attention to detail, and the ability to turn
+              complex information into clear interfaces.
+            </p>
+          </details>
+
+          <details>
+            <summary>How do I approach a new project?</summary>
+            <p>
+              I first understand the problem and requirements.
+              Then I organize the information, define flows,
+              design the interface, and refine the solution.
+            </p>
+          </details>
+
+          <details>
+            <summary>What types of products can I design?</summary>
+            <p>
+              Web platforms, internal tools, back offices,
+              betting products, terminal interfaces,
+              and responsive experiences.
+            </p>
+          </details>
+
+          <details>
+            <summary>Why should a team hire me?</summary>
+            <p>
+              Because I combine visual judgment, functional thinking,
+              collaboration, and a strong willingness to improve
+              solutions until they work well for users and the business.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer id="contact">
+
+    <div class="container footer">
+
+      <div>
+
+        <div class="footer-profile">
+          <img
+            class="footer-avatar"
+            src="../images/foto-gabriela.png"
+            alt="Gabriela Barreda"
+          >
+          <h3>
+            Gabriela Barreda Rios
+          </h3>
+        </div>
+
+        <p class="footer-description">
+          UX/UI Designer focused on clear platforms,
+          functional systems, and purposeful digital products.
+        </p>
+
+        <span>
+          © 2026 Gabriela Barreda Rios
+        </span>
+
+      </div>
+
+
+      <div>
+
+        <div class="footer-title">
+          Links
+        </div>
+
+        <div class="footer-links">
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#tools">Tools</a>
+          <a href="#about">About</a>
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="footer-title">
+          Contact
+        </div>
+
+        <div class="footer-links">
+
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=gabrielaba307@gmail.com&su=UX%2FUI%20Job%20Opportunity%20%E2%80%94%20Gabriela%20Barreda"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            gabrielaba307@gmail.com
+          </a>
+
+          <a
+            href="https://wa.me/51924344923"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            +51 924 344 923
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    function openProject(event, url) {
+
+      if (event.target.closest("a")) {
+        return;
+      }
+
+      window.open(
+        url,
+        "_blank",
+        "noopener,noreferrer"
+      );
+    }
+
+
+    function openProjectKeyboard(event, url) {
+
+      if (
+        event.key === "Enter" ||
+        event.key === " "
+      ) {
+
+        event.preventDefault();
+
+        window.open(
+          url,
+          "_blank",
+          "noopener,noreferrer"
+        );
+      }
+    }
+
+  </script>
+
+</body>
+</html>
