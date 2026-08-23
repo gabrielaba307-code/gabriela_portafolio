@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -9,11 +9,11 @@
 
   <meta
     name="description"
-    content="UX/UI case study for Aciértala, a sportsbook platform designed for event exploration, market selection, and bet slip building."
+    content="Caso de estudio UX/UI de Aciértala, una plataforma sportsbook diseñada para explorar eventos, mercados y construir un ticket de apuestas."
   >
 
-  <link rel="icon" type="image/png" href="../images/favicon.png">
-  <link rel="apple-touch-icon" href="../images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,43 +23,8 @@
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="../case-study.css">
-
-  <style>
-
-    .case-language {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding-left: 8px;
-      margin-left: 3px;
-      border-left: 1px solid var(--border);
-      white-space: nowrap;
-    }
-
-    .case-language span {
-      font-size: 12px;
-      color: #b79889;
-    }
-
-    .case-language .active-language {
-      color: var(--orange);
-      font-weight: 800;
-    }
-
-    .case-language a {
-      color: var(--muted);
-      font-weight: 600;
-    }
-
-    .case-language a:hover {
-      color: var(--orange);
-    }
-
-  </style>
-
+  <link rel="stylesheet" href="case-study.css">
 </head>
-
 
 <body>
 
@@ -67,28 +32,27 @@
 
     <nav class="case-nav">
 
-      <a href="index.html#projects">← Projects</a>
-      <a href="#session">Session</a>
-      <a href="#challenge">Challenge</a>
-      <a href="#architecture">Architecture</a>
-      <a href="#flow">Flow</a>
-      <a href="#decisions">UX/UI Decisions</a>
-      <a href="#outcome">Outcome</a>
+      <a href="index.html#proyectos">← Proyectos</a>
+      <a href="#sesion">Sesión</a>
+      <a href="#reto">Reto</a>
+      <a href="#arquitectura">Arquitectura</a>
+      <a href="#flujo">Flujo</a>
+      <a href="#decisiones">Decisiones UX/UI</a>
+      <a href="#resultado">Resultado</a>
 
       <span class="case-language">
 
-        <a
-          href="../proyecto-aciertala.html"
-          lang="es"
-        >
-          ES
-        </a>
+        <span class="active-language">ES</span>
 
         <span>/</span>
 
-        <span class="active-language">
+        <a
+          href="en/proyecto-aciertala.html"
+          lang="en"
+          aria-label="View this case study in English"
+        >
           EN
-        </span>
+        </a>
 
       </span>
 
@@ -104,57 +68,48 @@
       <div class="case-container">
 
         <div class="case-kicker">
-          Sportsbook · Web Platform · UX/UI
+          Sportsbook · Plataforma Web · UX/UI
         </div>
 
         <h1>
-
-          Explore, select, and
-
-          <span>
-            build your bet slip.
-          </span>
-
+          Explorar, elegir y
+          <span>construir el ticket.</span>
         </h1>
 
         <p class="case-description">
-          Aciértala brings together sports, leagues, events, markets,
-          and odds within a sportsbook with an extensive offering.
-          The design connects match exploration, market selection,
-          and bet slip building without losing the selections made
-          during the session.
+          Aciértala reúne deportes, ligas, eventos, mercados y cuotas
+          dentro de un sportsbook con una oferta amplia.
+          El diseño conecta la exploración de partidos,
+          selección de mercados y construcción del ticket
+          sin perder las elecciones realizadas durante la sesión.
         </p>
 
-
         <div class="case-cover">
-
           <img
-            src="../images/Plataforma Sportsbook_Aciértala.png"
+            src="images/Plataforma Sportsbook_Aciértala.png"
             alt="Aciértala Sportsbook"
           >
-
         </div>
-
 
         <div class="case-meta">
 
           <div class="meta-item">
-            <strong>Role</strong>
-            <span>UX/UI Designer</span>
+            <strong>Rol</strong>
+            <span>Diseñadora UX/UI</span>
           </div>
 
           <div class="meta-item">
-            <strong>Product</strong>
+            <strong>Producto</strong>
             <span>Sportsbook</span>
           </div>
 
           <div class="meta-item">
-            <strong>Experience</strong>
-            <span>Sports Betting</span>
+            <strong>Industria</strong>
+            <span>Apuestas deportivas</span>
           </div>
 
           <div class="meta-item">
-            <strong>Platform</strong>
+            <strong>Plataforma</strong>
             <span>Web · Desktop</span>
           </div>
 
@@ -165,36 +120,33 @@
     </section>
 
 
-    <section
-      class="case-section"
-      id="session"
-    >
+    <section class="case-section" id="sesion">
 
       <div class="case-container">
 
         <span class="section-label">
-          01 · Betting Session
+          01 · Sesión de apuesta
         </span>
 
         <h2>
-          Many options before a single bet.
+          Muchas opciones antes de una sola apuesta.
         </h2>
 
         <p class="case-lead">
-          A user may start by browsing football, enter a league,
-          compare several matches, open additional markets,
-          and combine selections from different events.
+          Un usuario puede comenzar explorando fútbol,
+          entrar a una liga, comparar distintos partidos,
+          abrir mercados adicionales y combinar selecciones
+          de varios eventos.
         </p>
 
         <p>
-          The challenge appears when exploration starts competing
-          with the bet the user is already building.
+          El reto aparece cuando la exploración empieza a competir
+          con el ticket que el usuario ya está construyendo.
         </p>
 
         <p>
-          The interface needed to let users investigate new alternatives
-          without losing sight of which selections were already
-          part of the bet slip.
+          La interfaz debía permitir investigar nuevas alternativas
+          sin perder de vista las selecciones realizadas.
         </p>
 
       </div>
@@ -202,81 +154,65 @@
     </section>
 
 
-    <section
-      class="case-section"
-      id="challenge"
-    >
+    <section class="case-section" id="reto">
 
       <div class="case-container">
 
         <span class="section-label">
-          02 · The Challenge
+          02 · El reto
         </span>
 
         <h2>
-          Explore without losing what you selected.
+          Explorar sin perder lo seleccionado.
         </h2>
 
         <p class="case-lead">
-          The sportsbook needed to manage an extensive offering
-          without forcing users to start over every time they moved
-          between sports, leagues, or matches.
+          El sportsbook debía manejar una oferta extensa
+          sin obligar al usuario a comenzar de nuevo
+          cada vez que cambia de deporte, liga o partido.
         </p>
-
 
         <div class="challenge-grid">
 
           <article class="challenge-card">
-
-            <span class="challenge-number">
-              01
-            </span>
+            <span class="challenge-number">01</span>
 
             <h3>
-              Find events
+              Encontrar eventos
             </h3>
 
             <p>
-              Organize sports, leagues, and matches to reduce
-              the effort required to search.
+              Organizar deportes, ligas y partidos
+              para reducir el esfuerzo de búsqueda.
             </p>
-
           </article>
 
 
           <article class="challenge-card">
-
-            <span class="challenge-number">
-              02
-            </span>
+            <span class="challenge-number">02</span>
 
             <h3>
-              Discover markets
+              Descubrir mercados
             </h3>
 
             <p>
-              Move from common odds to more specific betting
-              alternatives within an event.
+              Pasar de cuotas comunes a alternativas
+              más específicas dentro del evento.
             </p>
-
           </article>
 
 
           <article class="challenge-card">
-
-            <span class="challenge-number">
-              03
-            </span>
+            <span class="challenge-number">03</span>
 
             <h3>
-              Preserve selections
+              Conservar selecciones
             </h3>
 
             <p>
-              Keep chosen options available while users review
-              other matches and markets.
+              Mantener las opciones elegidas disponibles
+              mientras el usuario revisa otros eventos.
             </p>
-
           </article>
 
         </div>
@@ -286,80 +222,59 @@
     </section>
 
 
-    <section
-      class="case-section"
-      id="architecture"
-    >
+    <section class="case-section" id="arquitectura">
 
       <div class="case-container">
 
         <span class="section-label">
-          03 · Architecture
+          03 · Arquitectura
         </span>
 
         <h2>
-          From event list to bet slip.
+          Del listado de eventos al ticket.
         </h2>
 
         <p class="case-lead">
-          The product supports different moments,
-          from discovering an event to reviewing what will
-          eventually be confirmed as a bet.
+          El producto acompaña distintos momentos,
+          desde descubrir un partido hasta revisar
+          lo que finalmente se confirmará como apuesta.
         </p>
-
 
         <div class="modules-grid">
 
           <article class="module-card">
+            <span class="module-tag">MOMENTO 01</span>
 
-            <span class="module-tag">
-              MOMENT 01
-            </span>
-
-            <h3>
-              Explore
-            </h3>
+            <h3>Explorar</h3>
 
             <p>
-              Discover sports, live events, and upcoming matches.
+              Descubrir deportes, eventos en vivo
+              y próximos partidos.
             </p>
-
           </article>
 
 
           <article class="module-card">
+            <span class="module-tag">MOMENTO 02</span>
 
-            <span class="module-tag">
-              MOMENT 02
-            </span>
-
-            <h3>
-              Go deeper
-            </h3>
+            <h3>Profundizar</h3>
 
             <p>
-              Open a match to review a broader range
-              of betting markets.
+              Abrir un encuentro para revisar
+              una mayor variedad de mercados.
             </p>
-
           </article>
 
 
           <article class="module-card">
+            <span class="module-tag">MOMENTO 03</span>
 
-            <span class="module-tag">
-              MOMENT 03
-            </span>
-
-            <h3>
-              Build
-            </h3>
+            <h3>Construir</h3>
 
             <p>
-              Add selections and review them inside the bet slip
-              before confirmation.
+              Agregar selecciones y revisarlas
+              dentro del ticket antes de confirmar.
             </p>
-
           </article>
 
         </div>
@@ -374,82 +289,61 @@
       <div class="case-container">
 
         <span class="section-label">
-          Exploration
+          Exploración
         </span>
 
         <h2>
-          Find one match among many alternatives.
+          Encontrar un partido entre muchas alternativas.
         </h2>
 
         <p class="case-lead">
-          The main screen brings together sport navigation,
-          competitions, matches, and odds without requiring users
-          to open every event before they can begin comparing.
+          La pantalla principal reúne navegación por deportes,
+          competiciones, partidos y cuotas sin obligar
+          al usuario a abrir cada evento.
         </p>
 
-
         <div class="case-image">
-
           <img
-            src="../images/aciertala-exploracion.png"
-            alt="Aciértala event exploration"
+            src="images/aciertala-exploracion.png"
+            alt="Exploración de eventos Aciértala"
           >
-
         </div>
-
 
         <div class="modules-grid">
 
           <article class="module-card">
+            <span class="module-tag">NAVEGACIÓN</span>
 
-            <span class="module-tag">
-              NAVIGATION
-            </span>
-
-            <h3>
-              Sports and leagues
-            </h3>
+            <h3>Deportes y ligas</h3>
 
             <p>
-              Help users quickly narrow down the visible offering.
+              Permiten acotar rápidamente
+              la oferta visible.
             </p>
-
           </article>
 
 
           <article class="module-card">
+            <span class="module-tag">LISTADO</span>
 
-            <span class="module-tag">
-              LISTING
-            </span>
-
-            <h3>
-              Main odds
-            </h3>
+            <h3>Cuotas principales</h3>
 
             <p>
-              Common betting options can be selected without leaving
-              the general event view.
+              Las opciones frecuentes pueden seleccionarse
+              desde el listado general.
             </p>
-
           </article>
 
 
           <article class="module-card">
+            <span class="module-tag">TICKET</span>
 
-            <span class="module-tag">
-              BET SLIP
-            </span>
-
-            <h3>
-              Persistent selections
-            </h3>
+            <h3>Selecciones persistentes</h3>
 
             <p>
-              Previous choices remain available while users
-              continue exploring.
+              Las elecciones previas permanecen visibles
+              mientras el usuario continúa explorando.
             </p>
-
           </article>
 
         </div>
@@ -459,52 +353,45 @@
     </section>
 
 
-    <section
-      class="case-section"
-      id="flow"
-    >
+    <section class="case-section" id="flujo">
 
       <div class="case-container">
 
         <span class="section-label">
-          04 · Selection Flow
+          04 · Flujo de selección
         </span>
 
         <h2>
-          A selection should not disappear.
+          Una selección no debería desaparecer.
         </h2>
 
         <p class="case-lead">
-          Once users enter a match, the interface moves away
-          from broad discovery and focuses on the event
-          and its markets.
+          Al ingresar a un partido, la interfaz pasa
+          de exploración general a concentrarse
+          en el evento y sus mercados.
         </p>
 
         <p>
-          Teams, score, and match status help users understand
-          the event before reviewing more specific categories.
+          Equipos, marcador y estado permiten reconocer
+          rápidamente el encuentro.
         </p>
 
         <p>
-          When an odd is selected, it is immediately added to the bet slip.
-          Users can continue exploring while keeping a permanent reference
-          to what they have already chosen.
+          Al seleccionar una cuota, esta se incorpora
+          inmediatamente al ticket.
         </p>
-
 
         <div class="case-image">
-
           <img
-            src="../images/aciertala-flujo-seleccion.png"
-            alt="Aciértala event detail and bet slip"
+            src="images/aciertala-flujo-seleccion.png"
+            alt="Detalle de evento y ticket Aciértala"
           >
-
         </div>
 
-
         <p>
-          As selections are added, the bet slip brings together
-          the market, odds, stake, and potential return before confirmation.
+          A medida que se agregan selecciones,
+          el ticket reúne mercado, cuota, monto
+          y retorno potencial antes de confirmar.
         </p>
 
       </div>
@@ -512,135 +399,78 @@
     </section>
 
 
-    <section
-      class="case-section"
-      id="decisions"
-    >
+    <section class="case-section" id="decisiones">
 
       <div class="case-container">
 
         <span class="section-label">
-          05 · UX/UI Decisions
+          05 · Decisiones UX/UI
         </span>
 
         <h2>
-          Design for an entire betting session.
+          Diseñar para toda una sesión de apuesta.
         </h2>
 
         <p class="case-lead">
-          The decisions aim to ensure that exploring new events
-          does not mean forgetting previous selections or losing
-          clarity about what will eventually be confirmed.
+          Las decisiones buscan que explorar nuevos eventos
+          no signifique olvidar selecciones previas
+          ni perder claridad sobre lo que se confirmará.
         </p>
-
 
         <div class="decisions-list">
 
           <article class="decision-item">
-
-            <span class="decision-number">
-              01
-            </span>
-
-            <h3>
-              Persistent bet slip
-            </h3>
-
+            <span class="decision-number">01</span>
+            <h3>Ticket persistente</h3>
             <p>
-              Selections remain available while users explore
-              other events.
+              Las selecciones permanecen disponibles
+              mientras se exploran otros eventos.
             </p>
-
           </article>
 
-
           <article class="decision-item">
-
-            <span class="decision-number">
-              02
-            </span>
-
-            <h3>
-              Actionable odds
-            </h3>
-
+            <span class="decision-number">02</span>
+            <h3>Cuotas accionables</h3>
             <p>
-              Available options and selected states are visually
-              differentiated.
+              Opciones disponibles y seleccionadas
+              mantienen estados visuales diferenciados.
             </p>
-
           </article>
 
-
           <article class="decision-item">
-
-            <span class="decision-number">
-              03
-            </span>
-
-            <h3>
-              Market depth
-            </h3>
-
+            <span class="decision-number">03</span>
+            <h3>Profundidad de mercados</h3>
             <p>
-              The event list surfaces common betting options while
-              event detail expands the available alternatives.
+              El listado muestra opciones frecuentes
+              y el detalle amplía las alternativas.
             </p>
-
           </article>
 
-
           <article class="decision-item">
-
-            <span class="decision-number">
-              04
-            </span>
-
-            <h3>
-              Event status
-            </h3>
-
+            <span class="decision-number">04</span>
+            <h3>Estado del evento</h3>
             <p>
-              Score and match time receive stronger visual priority
-              when the event is live.
+              Marcador y tiempo reciben prioridad
+              cuando el partido está en vivo.
             </p>
-
           </article>
 
-
           <article class="decision-item">
-
-            <span class="decision-number">
-              05
-            </span>
-
-            <h3>
-              Immediate feedback
-            </h3>
-
+            <span class="decision-number">05</span>
+            <h3>Feedback inmediato</h3>
             <p>
-              Selected odds change state and appear immediately
-              inside the bet slip.
+              Una cuota seleccionada cambia de estado
+              y aparece en el ticket.
             </p>
-
           </article>
 
-
           <article class="decision-item">
-
-            <span class="decision-number">
-              06
-            </span>
-
-            <h3>
-              Review before betting
-            </h3>
-
+            <span class="decision-number">06</span>
+            <h3>Revisión antes de apostar</h3>
             <p>
-              Selections, total odds, stake, and potential return
-              can be checked before confirmation.
+              Selecciones, cuota total, monto y retorno
+              pueden verificarse antes de confirmar.
             </p>
-
           </article>
 
         </div>
@@ -650,52 +480,48 @@
     </section>
 
 
-    <section
-      class="case-section"
-      id="outcome"
-    >
+    <section class="case-section" id="resultado">
 
       <div class="case-container">
 
         <span class="section-label">
-          06 · Outcome
+          06 · Resultado
         </span>
 
         <div class="result-box">
 
           <h2>
-            A session that preserves every decision.
+            Una sesión que conserva cada decisión.
           </h2>
 
           <p>
-            The solution connects exploration, event detail,
-            and the bet slip instead of treating them as isolated workflows.
+            La propuesta conecta exploración,
+            detalle del evento y ticket
+            en lugar de tratarlos como flujos aislados.
           </p>
 
           <p>
-            Users can review multiple alternatives while the platform
-            preserves previous selections and clearly shows
-            what will eventually be confirmed as a bet.
+            El usuario puede revisar distintas alternativas
+            mientras la plataforma conserva las selecciones realizadas.
           </p>
 
         </div>
-
 
         <div class="results-grid">
 
           <article class="result-card">
             <strong>01</strong>
-            <span>Exploration and the bet slip remain connected.</span>
+            <span>Exploración y ticket permanecen conectados.</span>
           </article>
 
           <article class="result-card">
             <strong>02</strong>
-            <span>Progressive access to a broad range of markets.</span>
+            <span>Acceso progresivo a una amplia variedad de mercados.</span>
           </article>
 
           <article class="result-card">
             <strong>03</strong>
-            <span>Complete review before bet confirmation.</span>
+            <span>Revisión completa antes de confirmar la apuesta.</span>
           </article>
 
         </div>
@@ -709,63 +535,46 @@
 
       <div class="case-container">
 
-        <h2>
-          More Projects
-        </h2>
+        <h2>Explorar más proyectos</h2>
 
         <div class="explore-grid">
 
-          <a
-            class="explore-card"
-            href="retail-case-study.html"
-          >
-
+          <a class="explore-card" href="proyecto-retail.html">
             <img
-              src="../images/Back Office_Apuestas Retail.png"
-              alt="Retail Betting Back Office"
+              src="images/Back Office_Apuestas Retail.png"
+              alt="Back Office Apuestas Retail"
             >
 
             <div class="explore-info">
               <span>Back Office · Retail</span>
-              <strong>Retail Betting Back Office →</strong>
+              <strong>Back Office Apuestas Retail →</strong>
             </div>
-
           </a>
 
 
-          <a
-            class="explore-card"
-            href="universal-race-case-study.html"
-          >
-
+          <a class="explore-card" href="proyecto-universal-race.html">
             <img
-              src="../images/Plataforma Hípica_Universal Race.png"
+              src="images/Plataforma Hípica_Universal Race.png"
               alt="Universal Race"
             >
 
             <div class="explore-info">
-              <span>Horse Racing · Web + Mobile</span>
+              <span>Hípica · Web + Mobile</span>
               <strong>Universal Race →</strong>
             </div>
-
           </a>
 
 
-          <a
-            class="explore-card"
-            href="doradobet-case-study.html"
-          >
-
+          <a class="explore-card" href="proyecto-doradobet.html">
             <img
-              src="../images/Plataforma Hipica_DoradoBet.png"
+              src="images/Plataforma Hipica_DoradoBet.png"
               alt="DoradoBet"
             >
 
             <div class="explore-info">
-              <span>Terminal · Horse Racing</span>
+              <span>Terminal · Hípica</span>
               <strong>DoradoBet →</strong>
             </div>
-
           </a>
 
         </div>
@@ -778,11 +587,9 @@
 
 
   <footer class="case-footer">
-
     <div class="case-container">
-      © 2026 Gabriela Barreda Rios · UX/UI Designer
+      © 2026 Gabriela Barreda Rios · Diseñadora UX/UI
     </div>
-
   </footer>
 
 </body>
